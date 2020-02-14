@@ -17,7 +17,7 @@ export class LoginComponent {
   signIn(credentials) {
     this.authService.login(credentials)
       .subscribe(result => { 
-        if (result)
+        if (result)//truthy
           this.router.navigate(['/']);
         else  
           this.invalidLogin = true; 
